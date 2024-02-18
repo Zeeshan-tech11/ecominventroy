@@ -1,0 +1,15 @@
+{
+  "name": "mvcproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zeeshan-tech11/ecominventroy/issues"
+  },
+  "homepage": "https://github.com/Zeeshan-tech11/ecominventroy#readme"
+}
