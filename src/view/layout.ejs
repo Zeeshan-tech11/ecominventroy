@@ -76,6 +76,12 @@
         </div>
       </div>
     </nav>
+    <% if(locals?.lastVisit){%>
+
+    <div class="alert alert-primary" role="alert">
+      your last visit: <%=locals.lastVisit %>
+    </div>
+    <% }%>
 
     <div class="container" id="ele"><%- body %></div>
   </body>
