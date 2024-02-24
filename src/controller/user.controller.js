@@ -17,7 +17,25 @@ export default class UserController {
     if (!user) {
       return res.render("login");
     }
+    req.session.email = req.body.email;
     const products = ProductModel.get();
-    res.render("products", { products });
+    res.redirect("product");
+  }
+  logout(req, res) {
+    //destriy session
+    req.session.destroy((err) => {
+      if (err) {
+        console.log("err in sessionn destroy");
+      } else {
+        res.redirect("/login");
+      }
+    });
+  }
+  homePage(req, res) {
+    if (req.session.email) {
+      res.redirect("/product");
+    } else {
+      res.redirect("/login");
+    }
   }
 }
